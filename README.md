@@ -6,7 +6,7 @@ Este projeto lê as titulações de PEEP de um arquivo JSON, identifica a PEEP m
 ## Ambiente utilizado
 Windows;
 Visual Studio Code 1.100.3;
-Python 3.10.16;
+Python 3.10.16.
 
 ## Respostas
 
