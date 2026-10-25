@@ -63,6 +63,7 @@ Python 3.10.16.
 ### Parte 2 – Verificação
 
 **A PEEP indicada em cada gráfico será utilizada no relatório final do protocolo de pesquisa clínica. Por isso, os pesquisadores precisam ter confiança de que ela está correta.**
+
 **a)	Implemente a identificação da PEEP mais adequada como uma função separada da geração dos gráficos.**
 
 O código foi organizado em três funções, com responsabilidades distintas: a primeira realiza a validação dos dados e a identificação da PEEP ótima; a segunda gera os gráficos individuais, incluindo os alertas pertinentes; e a terceira é responsável pelo carregamento dos dados e pela chamada das duas funções anteriores.
