@@ -10,7 +10,8 @@ Python 3.10.16.
 
 ## Funções
 - data_validation_and_opt_PEEP_identification
-      Validates data and identifies the ideal PEEP value given the collapse and hyperdistension values of the respiratory system.
+
+  Validates data and identifies the ideal PEEP value given the collapse and hyperdistension values of the respiratory system.
 
     Args:
         hyperdistension (pandas Series): Hyperdistension values.
@@ -22,7 +23,8 @@ Python 3.10.16.
         if the number of points is different from 1, they will not be displayed on the graph.
 
 - saves_opt_PEEP_graphs
-      Plots collapse values, hyperdistension values and optimal PEEP as a function of PEEP. Saves the graphs in the 'opt_PEEP_plots' file.
+
+  Plots collapse values, hyperdistension values and optimal PEEP as a function of PEEP. Saves the graphs in the 'opt_PEEP_plots' file.
 
     Args:
         patient_ID (str): Patient identification
@@ -35,12 +37,13 @@ Python 3.10.16.
     Returns:
         None.
 
-  - peep_identification_and_plot
-        Loads data from the.json file containing the collapse and hyperdistension values of the respiratory system;
-    validates data;
-    identifies the ideal PEEP value;
-    plots collapse values, hyperdistension values and optimal PEEP as a function of PEEP; and
-    saves the graphs in the 'opt_PEEP_plots' file.
+- peep_identification_and_plot
+
+  Loads data from the.json file containing the collapse and hyperdistension values of the respiratory system;
+  validates data;
+  identifies the ideal PEEP value;
+  plots collapse values, hyperdistension values and optimal PEEP as a function of PEEP; and
+  saves the graphs in the 'opt_PEEP_plots' file.
 
     Args:
         json_path (str): Path to the .json file containing the data.
