@@ -18,7 +18,6 @@ Python 3.10.16.
     Args:
   
         hyperdistension (pandas Series): Hyperdistension values.
-  
         PEEP (pandas Series): PEEP values.
         collapse (pandas Series): Collapse values.
 
@@ -31,6 +30,7 @@ Python 3.10.16.
   Plots collapse values, hyperdistension values and optimal PEEP as a function of PEEP. Saves the graphs in the 'opt_PEEP_plots' file.
 
     Args:
+  
         patient_ID (str): Patient identification
         hyperdistension (pandas Series): Hyperdistension values.
         PEEP (pandas Series): PEEP values.
@@ -39,6 +39,7 @@ Python 3.10.16.
         if the number of points is different from 1, they will not be displayed on the graph.
         
     Returns:
+  
         None.
 
 - peep_identification_and_plot
@@ -50,9 +51,11 @@ Python 3.10.16.
   saves the graphs in the 'opt_PEEP_plots' file.
 
     Args:
+  
         json_path (str): Path to the .json file containing the data.
 
     Returns:
+  
         None.
 
 ## Respostas
