@@ -3,6 +3,8 @@ Autora: Fabiana Gomes Diniz
 
 Este projeto lê as titulações de PEEP de um arquivo JSON, identifica a PEEP mais adequada de cada paciente (a PEEP imediatamente anterior ao cruzamento entre as curvas de hiperdistensão e colapso) e gera um gráfico PNG por paciente.
 
+Para validação do algoritmo, a ferramenta Claude foi utilizada para elaboração de um arquivo JSON com conjuntos de dados que representam diferentes situações esperadas e casos limite. 
+
 ## Ambiente utilizado
 Windows;
 
