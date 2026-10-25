@@ -1,0 +1,229 @@
+[
+  {
+    "Patient ID": "T01_valido_uma_intersecao",
+    "Descricao": "Caso valido: uma unica intersecao entre PEEP 16 e 14. Esperado: linha vermelha em PEEP=16, sem avisos.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 5},
+      {"PEEP": 18, "Hyperdistension": 75, "Collapse": 20},
+      {"PEEP": 16, "Hyperdistension": 55, "Collapse": 40},
+      {"PEEP": 14, "Hyperdistension": 35, "Collapse": 60},
+      {"PEEP": 12, "Hyperdistension": 15, "Collapse": 80}
+    ]
+  },
+  {
+    "Patient ID": "T02_hiperdistensao_zero",
+    "Descricao": "Hiperdistensao 0% em todos os passos. Esperado: 'Valores permanecem em 0%; As curvas nao se cruzam'.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 0, "Collapse": 5},
+      {"PEEP": 18, "Hyperdistension": 0, "Collapse": 10},
+      {"PEEP": 16, "Hyperdistension": 0, "Collapse": 20},
+      {"PEEP": 14, "Hyperdistension": 0, "Collapse": 30},
+      {"PEEP": 12, "Hyperdistension": 0, "Collapse": 40}
+    ]
+  },
+  {
+    "Patient ID": "T03_colapso_zero",
+    "Descricao": "Colapso 0% em todos os passos. Esperado: 'Valores permanecem em 0%; As curvas nao se cruzam'.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 0},
+      {"PEEP": 18, "Hyperdistension": 80, "Collapse": 0},
+      {"PEEP": 16, "Hyperdistension": 70, "Collapse": 0},
+      {"PEEP": 14, "Hyperdistension": 60, "Collapse": 0},
+      {"PEEP": 12, "Hyperdistension": 50, "Collapse": 0}
+    ]
+  },
+  {
+    "Patient ID": "T04_hiperdistensao_cem",
+    "Descricao": "Hiperdistensao 100% em todos os passos. Esperado: 'Valores permanecem em 100%; As curvas nao se cruzam'.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 100, "Collapse": 10},
+      {"PEEP": 18, "Hyperdistension": 100, "Collapse": 30},
+      {"PEEP": 16, "Hyperdistension": 100, "Collapse": 50},
+      {"PEEP": 14, "Hyperdistension": 100, "Collapse": 70},
+      {"PEEP": 12, "Hyperdistension": 100, "Collapse": 90}
+    ]
+  },
+  {
+    "Patient ID": "T05_colapso_cem",
+    "Descricao": "Colapso 100% em todos os passos. Esperado: 'Valores permanecem em 100%; As curvas nao se cruzam'.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 10, "Collapse": 100},
+      {"PEEP": 18, "Hyperdistension": 20, "Collapse": 100},
+      {"PEEP": 16, "Hyperdistension": 30, "Collapse": 100},
+      {"PEEP": 14, "Hyperdistension": 40, "Collapse": 100},
+      {"PEEP": 12, "Hyperdistension": 50, "Collapse": 100}
+    ]
+  },
+  {
+    "Patient ID": "T06_valor_acima_de_100",
+    "Descricao": "Hiperdistensao com valor 110 (> 100), mantendo uma intersecao. Esperado: aviso 'Os valores de colapso e hiperdistensao devem estar entre 0 e 100%'.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 110, "Collapse": 5},
+      {"PEEP": 18, "Hyperdistension": 80, "Collapse": 20},
+      {"PEEP": 16, "Hyperdistension": 55, "Collapse": 40},
+      {"PEEP": 14, "Hyperdistension": 30, "Collapse": 60},
+      {"PEEP": 12, "Hyperdistension": 10, "Collapse": 80}
+    ]
+  },
+  {
+    "Patient ID": "T07_valor_negativo",
+    "Descricao": "Colapso com valor -10 (< 0), mantendo uma intersecao. Esperado: aviso 'Os valores de colapso e hiperdistensao devem estar entre 0 e 100%'.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": -10},
+      {"PEEP": 18, "Hyperdistension": 70, "Collapse": 20},
+      {"PEEP": 16, "Hyperdistension": 50, "Collapse": 40},
+      {"PEEP": 14, "Hyperdistension": 30, "Collapse": 60},
+      {"PEEP": 12, "Hyperdistension": 10, "Collapse": 80}
+    ]
+  },
+  {
+    "Patient ID": "T08_sem_intersecao",
+    "Descricao": "Curvas nunca se cruzam. Esperado: aviso 'As curvas nao se cruzam', sem linha vermelha.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 10},
+      {"PEEP": 18, "Hyperdistension": 80, "Collapse": 15},
+      {"PEEP": 16, "Hyperdistension": 70, "Collapse": 20},
+      {"PEEP": 14, "Hyperdistension": 60, "Collapse": 25},
+      {"PEEP": 12, "Hyperdistension": 50, "Collapse": 30}
+    ]
+  },
+  {
+    "Patient ID": "T09_multiplas_intersecoes",
+    "Descricao": "Curvas se cruzam 4 vezes. Esperado: aviso 'As curvas se cruzam mais de uma vez', sem linha vermelha.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 80, "Collapse": 50},
+      {"PEEP": 18, "Hyperdistension": 30, "Collapse": 50},
+      {"PEEP": 16, "Hyperdistension": 70, "Collapse": 50},
+      {"PEEP": 14, "Hyperdistension": 30, "Collapse": 50},
+      {"PEEP": 12, "Hyperdistension": 70, "Collapse": 50}
+    ]
+  },
+  {
+    "Patient ID": "T10_multiplos_avisos",
+    "Descricao": "Hiperdistensao 0% + colapso > 100 + sem intersecao. Esperado: tres avisos separados por ';' no grafico.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 0, "Collapse": 105},
+      {"PEEP": 18, "Hyperdistension": 0, "Collapse": 110},
+      {"PEEP": 16, "Hyperdistension": 0, "Collapse": 120},
+      {"PEEP": 14, "Hyperdistension": 0, "Collapse": 130},
+      {"PEEP": 12, "Hyperdistension": 0, "Collapse": 140}
+    ]
+  },
+  {
+    "Patient ID": "T11_igualdade_no_meio",
+    "Descricao": "Curvas com valor exatamente igual em PEEP=16 (50 e 50). Esperado: UMA intersecao, associada ao passo anterior (PEEP=18), linha vermelha em 18, sem avisos.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 10},
+      {"PEEP": 18, "Hyperdistension": 70, "Collapse": 30},
+      {"PEEP": 16, "Hyperdistension": 50, "Collapse": 50},
+      {"PEEP": 14, "Hyperdistension": 30, "Collapse": 70},
+      {"PEEP": 12, "Hyperdistension": 10, "Collapse": 90}
+    ]
+  },
+  {
+    "Patient ID": "T12_igualdade_no_primeiro_passo",
+    "Descricao": "Diferenca zero no primeiro passo (i == 0). Esperado: aviso 'As curvas se encontram apenas no primeiro passo', sem linha vermelha.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 50, "Collapse": 50},
+      {"PEEP": 18, "Hyperdistension": 40, "Collapse": 50},
+      {"PEEP": 16, "Hyperdistension": 30, "Collapse": 50},
+      {"PEEP": 14, "Hyperdistension": 20, "Collapse": 50},
+      {"PEEP": 12, "Hyperdistension": 10, "Collapse": 50}
+    ]
+  },
+  {
+    "Patient ID": "T13_igualdade_no_ultimo_passo",
+    "Descricao": "Diferenca zero no ultimo passo (tratado fora do loop). Esperado: UMA intersecao associada ao penultimo passo (PEEP=14), linha vermelha em 14.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 10},
+      {"PEEP": 18, "Hyperdistension": 80, "Collapse": 20},
+      {"PEEP": 16, "Hyperdistension": 70, "Collapse": 30},
+      {"PEEP": 14, "Hyperdistension": 60, "Collapse": 40},
+      {"PEEP": 12, "Hyperdistension": 50, "Collapse": 50}
+    ]
+  },
+  {
+    "Patient ID": "T14_toque_sem_cruzamento",
+    "Descricao": "Curvas apenas se tocam em PEEP=18 (diferenca 10, 0, 10) sem trocar de sinal. Comportamento atual: conta como UMA intersecao (linha em 20). Verifique se isso e o desejado.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 60, "Collapse": 50},
+      {"PEEP": 18, "Hyperdistension": 50, "Collapse": 50},
+      {"PEEP": 16, "Hyperdistension": 60, "Collapse": 50},
+      {"PEEP": 14, "Hyperdistension": 70, "Collapse": 50},
+      {"PEEP": 12, "Hyperdistension": 80, "Collapse": 50}
+    ]
+  },
+  {
+    "Patient ID": "T15_curvas_identicas",
+    "Descricao": "Hiperdistensao igual ao colapso em todos os passos (diferenca sempre 0). Esperado: varios indices encontrados, aviso 'As curvas se cruzam mais de uma vez'.",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 10, "Collapse": 10},
+      {"PEEP": 18, "Hyperdistension": 20, "Collapse": 20},
+      {"PEEP": 16, "Hyperdistension": 30, "Collapse": 30},
+      {"PEEP": 14, "Hyperdistension": 40, "Collapse": 40},
+      {"PEEP": 12, "Hyperdistension": 50, "Collapse": 50}
+    ]
+  },
+  {
+    "Patient ID": "E01_peep_crescente",
+    "Descricao": "ERRO ESPERADO: ValueError 'PEEP steps must be in descending order.' (PEEP em ordem crescente).",
+    "Titration Steps": [
+      {"PEEP": 12, "Hyperdistension": 15, "Collapse": 80},
+      {"PEEP": 14, "Hyperdistension": 35, "Collapse": 60},
+      {"PEEP": 16, "Hyperdistension": 55, "Collapse": 40},
+      {"PEEP": 18, "Hyperdistension": 75, "Collapse": 20},
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 5}
+    ]
+  },
+  {
+    "Patient ID": "E02_peep_repetido",
+    "Descricao": "ERRO ESPERADO: ValueError 'PEEP steps must be in descending order.' (PEEP repetido: 18, 18).",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 5},
+      {"PEEP": 18, "Hyperdistension": 75, "Collapse": 20},
+      {"PEEP": 18, "Hyperdistension": 55, "Collapse": 40},
+      {"PEEP": 14, "Hyperdistension": 35, "Collapse": 60},
+      {"PEEP": 12, "Hyperdistension": 15, "Collapse": 80}
+    ]
+  },
+  {
+    "Patient ID": "E03_valor_nulo_NaN",
+    "Descricao": "ERRO ESPERADO: ValueError 'Inputs cannot contain NaN or infinite values.' (null no colapso vira NaN no pandas).",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 5},
+      {"PEEP": 18, "Hyperdistension": 75, "Collapse": null},
+      {"PEEP": 16, "Hyperdistension": 55, "Collapse": 40},
+      {"PEEP": 14, "Hyperdistension": 35, "Collapse": 60},
+      {"PEEP": 12, "Hyperdistension": 15, "Collapse": 80}
+    ]
+  },
+  {
+    "Patient ID": "E04_valor_infinito",
+    "Descricao": "ERRO ESPERADO: ValueError 'Inputs cannot contain NaN or infinite values.' (Infinity na hiperdistensao; literal aceito pelo json do Python, nao e JSON estrito).",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 5},
+      {"PEEP": 18, "Hyperdistension": Infinity, "Collapse": 20},
+      {"PEEP": 16, "Hyperdistension": 55, "Collapse": 40},
+      {"PEEP": 14, "Hyperdistension": 35, "Collapse": 60},
+      {"PEEP": 12, "Hyperdistension": 15, "Collapse": 80}
+    ]
+  },
+  {
+    "Patient ID": "E05_chave_ausente",
+    "Descricao": "ERRO ESPERADO: ValueError de NaN (a chave 'Collapse' falta no segundo passo; o DataFrame preenche com NaN).",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 90, "Collapse": 5},
+      {"PEEP": 18, "Hyperdistension": 75},
+      {"PEEP": 16, "Hyperdistension": 55, "Collapse": 40},
+      {"PEEP": 14, "Hyperdistension": 35, "Collapse": 60},
+      {"PEEP": 12, "Hyperdistension": 15, "Collapse": 80}
+    ]
+  },
+  {
+    "Patient ID": "E06_um_unico_passo",
+    "Descricao": "ERRO ESPERADO: ValueError 'More than one sample is needed to identify PEEP.' (apenas um passo de titulacao).",
+    "Titration Steps": [
+      {"PEEP": 20, "Hyperdistension": 50, "Collapse": 50}
+    ]
+  }
+]
