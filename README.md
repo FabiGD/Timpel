@@ -4,9 +4,9 @@ Autora: Fabiana Gomes Diniz
 Este projeto lê as titulações de PEEP de um arquivo JSON, identifica a PEEP mais adequada de cada paciente (a PEEP imediatamente anterior ao cruzamento entre as curvas de hiperdistensão e colapso) e gera um gráfico PNG por paciente.
 
 ## Ambiente utilizado
-Windows
-Visual Studio Code 1.100.3
-Python 3.10.16
+Windows;
+Visual Studio Code 1.100.3;
+Python 3.10.16;
 
 ## Respostas
 
